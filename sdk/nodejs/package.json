@@ -1,0 +1,26 @@
+{
+    "name": "@huaxk/pulumi-harvester",
+    "version": "${VERSION}",
+    "description": "A Pulumi package for creating and managing harvester cloud resources.",
+    "keywords": [
+        "pulumi",
+        "harvester"
+    ],
+    "homepage": "https://pulumi.io",
+    "repository": "https://github.com/huaxk/pulumi-harvester",
+    "license": "Apache-2.0",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/mime": "^2.0.0",
+        "@types/node": "^10.0.0",
+        "typescript": "^4.3.5"
+    },
+    "pulumi": {
+        "resource": true
+    }
+}
