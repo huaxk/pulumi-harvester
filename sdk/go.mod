@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-xyz/sdk
+module github.com/huaxk/pulumi-harvester/sdk
 
 go 1.16
 
