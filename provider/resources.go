@@ -12,29 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package xyz
+package harvester
 
 import (
 	"fmt"
 	"path/filepath"
 	"unicode"
 
+	harvesterShim "github.com/harvester/terraform-provider-harvester/shim"
+	"github.com/huaxk/pulumi-harvester/provider/pkg/version"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumi/pulumi-xyz/provider/pkg/version"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/terraform-providers/terraform-provider-xyz/xyz"
 )
 
 // all of the token components used below.
 const (
 	// This variable controls the default name of the package in the package
 	// registries for nodejs and python:
-	mainPkg = "xyz"
+	mainPkg = "harvester"
 	// modules:
-	mainMod = "index" // the xyz module
+	mainMod = "index" // the harvester module
 )
 
 // makeMember manufactures a type token for the package and the given module and type.
@@ -91,17 +91,17 @@ var managedByPulumi = &tfbridge.DefaultInfo{Value: "Managed by Pulumi"}
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
 	// Instantiate the Terraform provider
-	p := shimv2.NewProvider(xyz.Provider())
+	p := shimv2.NewProvider(harvesterShim.NewProvider())
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
 		P:           p,
-		Name:        "xyz",
-		Description: "A Pulumi package for creating and managing xyz cloud resources.",
-		Keywords:    []string{"pulumi", "xyz"},
+		Name:        "harvester",
+		Description: "A Pulumi package for creating and managing harvester cloud resources.",
+		Keywords:    []string{"pulumi", "harvester"},
 		License:     "Apache-2.0",
 		Homepage:    "https://pulumi.io",
-		Repository:  "https://github.com/pulumi/pulumi-xyz",
+		Repository:  "https://github.com/huaxk/pulumi-harvester",
 		Config:      map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
@@ -111,9 +111,16 @@ func Provider() tfbridge.ProviderInfo {
 			// 		EnvVars: []string{"AWS_REGION", "AWS_DEFAULT_REGION"},
 			// 	},
 			// },
+
+			// "kubeconfig": {
+			// 	Type: makeType("kubeconfig", "KubeConfig"),
+			// 	Default: &tfbridge.DefaultInfo{
+			// 		EnvVars: []string{"HARVESTER_KUBECONFIG", "KUBECONFIG"},
+			// 	},
+			// },
 		},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
+		Resources: map[string]*tfbridge.ResourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi type. Two examples
 			// are below - the single line form is the common case. The multi-line form is
 			// needed only if you wish to override types or other default options.
@@ -126,6 +133,12 @@ func Provider() tfbridge.ProviderInfo {
 			// 		"tags": {Type: makeType(mainPkg, "Tags")},
 			// 	},
 			// },
+			"harvester_clusternetwork": {Tok: makeResource(mainMod, "ClusterNetwork")},
+			"harvester_image":          {Tok: makeResource(mainMod, "Image")},
+			"harvester_network":        {Tok: makeResource(mainMod, "Network")},
+			"harvester_ssh_key":        {Tok: makeResource(mainMod, "SSHKey")},
+			"harvester_virtualmachine": {Tok: makeResource(mainMod, "VirtualMachine")},
+			"harvester_volume":         {Tok: makeResource(mainMod, "Volume")},
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			// Map each resource in the Terraform provider to a Pulumi function. An example
@@ -133,6 +146,7 @@ func Provider() tfbridge.ProviderInfo {
 			// "aws_ami": {Tok: makeDataSource(mainMod, "getAmi")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
+			PackageName: "@huaxk/pulumi-harvester",
 			// List any npm dependencies and their versions
 			Dependencies: map[string]string{
 				"@pulumi/pulumi": "^3.0.0",
@@ -154,7 +168,7 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		Golang: &tfbridge.GolangInfo{
 			ImportBasePath: filepath.Join(
-				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", mainPkg),
+				fmt.Sprintf("github.com/huaxk/pulumi-%[1]s/sdk/", mainPkg),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
 				mainPkg,
