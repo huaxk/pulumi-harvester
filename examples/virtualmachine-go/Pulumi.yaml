@@ -1,0 +1,5 @@
+name: virtualmachine
+description: harvester virtualmachine example of go
+runtime: go
+template:
+  description: A minimal Go Pulumi program
