@@ -1,0 +1,1921 @@
+{
+    "name": "harvester",
+    "description": "A Pulumi package for creating and managing harvester cloud resources.",
+    "keywords": [
+        "pulumi",
+        "harvester"
+    ],
+    "homepage": "https://www.pulumi.com",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`harvester` Terraform Provider](https://github.com/harvester/terraform-provider-harvester).",
+    "repository": "https://github.com/huaxk/pulumi-harvester",
+    "publisher": "Harvester",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "config": {
+        "variables": {
+            "kubeconfig": {
+                "type": "string",
+                "description": "harvester kubeconfig\n"
+            }
+        }
+    },
+    "types": {
+        "harvester:index/VirtualMachineCloudinit:VirtualMachineCloudinit": {
+            "properties": {
+                "networkData": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkDataBase64": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkDataSecretName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userData": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userDataBase64": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userDataSecretName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "harvester:index/VirtualMachineDisk:VirtualMachineDisk": {
+            "properties": {
+                "accessMode": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "autoDelete": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "bootOrder": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "bus": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "containerImageName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "existingVolumeName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "hotPlug": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "image": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "size": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "storageClassName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "volumeMode": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "volumeName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredOutputs": [
+                        "accessMode",
+                        "autoDelete",
+                        "bus",
+                        "hotPlug",
+                        "name",
+                        "storageClassName",
+                        "volumeMode",
+                        "volumeName"
+                    ]
+                }
+            }
+        },
+        "harvester:index/VirtualMachineNetworkInterface:VirtualMachineNetworkInterface": {
+            "properties": {
+                "interfaceName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "ipAddress": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "macAddress": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "model": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "name"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredOutputs": [
+                        "interfaceName",
+                        "ipAddress",
+                        "macAddress",
+                        "name",
+                        "type"
+                    ]
+                }
+            }
+        },
+        "harvester:index/getVirtualMachineCloudinit:getVirtualMachineCloudinit": {
+            "properties": {
+                "networkData": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkDataBase64": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkDataSecretName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userData": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userDataBase64": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "userDataSecretName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "harvester:index/getVirtualMachineDisk:getVirtualMachineDisk": {
+            "properties": {
+                "accessMode": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "autoDelete": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "bootOrder": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "bus": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "containerImageName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "existingVolumeName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "hotPlug": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "image": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "size": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "storageClassName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "volumeMode": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "volumeName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "accessMode",
+                "autoDelete",
+                "bus",
+                "hotPlug",
+                "name",
+                "storageClassName",
+                "volumeMode",
+                "volumeName"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
+        "harvester:index/getVirtualMachineNetworkInterface:getVirtualMachineNetworkInterface": {
+            "properties": {
+                "interfaceName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "ipAddress": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "macAddress": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "model": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "networkName": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "interfaceName",
+                "ipAddress",
+                "macAddress",
+                "name",
+                "type"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        }
+    },
+    "provider": {
+        "description": "The provider type for the harvester package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n",
+        "properties": {
+            "kubeconfig": {
+                "type": "string",
+                "description": "harvester kubeconfig\n"
+            }
+        },
+        "inputProperties": {
+            "kubeconfig": {
+                "type": "string",
+                "description": "harvester kubeconfig\n"
+            }
+        }
+    },
+    "resources": {
+        "harvester:index/clusterNetwork:ClusterNetwork": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst vlan = new harvester.ClusterNetwork(\"vlan\", {\n    defaultPhysicalNic: \"harvester-mgmt\",\n    enable: true,\n});\n```\n{{% /example %}}\n{{% /examples %}}\n\n## Import\n\n# There is a vlan clusternetwork in Harvester clusters by default # Import it before manage it # And don't destroy it after imported\n\n```sh\n $ pulumi import harvester:index/clusterNetwork:ClusterNetwork vlan vlan\n```\n\n ",
+            "properties": {
+                "defaultPhysicalNic": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "enable": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "required": [
+                "enable",
+                "name",
+                "state"
+            ],
+            "inputProperties": {
+                "defaultPhysicalNic": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "enable": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "enable"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering ClusterNetwork resources.\n",
+                "properties": {
+                    "defaultPhysicalNic": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "enable": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "harvester:index/image:Image": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst k3os = new harvester.Image(\"k3os\", {\n    displayName: \"k3os\",\n    namespace: \"harvester-public\",\n    sourceType: \"download\",\n    url: \"https://github.com/rancher/k3os/releases/download/v0.20.6-k3s1r0/k3os-amd64.iso\",\n});\nconst ubuntu20 = new harvester.Image(\"ubuntu20\", {\n    displayName: \"ubuntu20\",\n    namespace: \"harvester-public\",\n    sourceType: \"download\",\n    url: \"http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img\",\n});\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nk3os = harvester.Image(\"k3os\",\n    display_name=\"k3os\",\n    namespace=\"harvester-public\",\n    source_type=\"download\",\n    url=\"https://github.com/rancher/k3os/releases/download/v0.20.6-k3s1r0/k3os-amd64.iso\")\nubuntu20 = harvester.Image(\"ubuntu20\",\n    display_name=\"ubuntu20\",\n    namespace=\"harvester-public\",\n    source_type=\"download\",\n    url=\"http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var k3os = new Harvester.Image(\"k3os\", new Harvester.ImageArgs\n        {\n            DisplayName = \"k3os\",\n            Namespace = \"harvester-public\",\n            SourceType = \"download\",\n            Url = \"https://github.com/rancher/k3os/releases/download/v0.20.6-k3s1r0/k3os-amd64.iso\",\n        });\n        var ubuntu20 = new Harvester.Image(\"ubuntu20\", new Harvester.ImageArgs\n        {\n            DisplayName = \"ubuntu20\",\n            Namespace = \"harvester-public\",\n            SourceType = \"download\",\n            Url = \"http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img\",\n        });\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.NewImage(ctx, \"k3os\", \u0026harvester.ImageArgs{\n\t\t\tDisplayName: pulumi.String(\"k3os\"),\n\t\t\tNamespace:   pulumi.String(\"harvester-public\"),\n\t\t\tSourceType:  pulumi.String(\"download\"),\n\t\t\tUrl:         pulumi.String(\"https://github.com/rancher/k3os/releases/download/v0.20.6-k3s1r0/k3os-amd64.iso\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\t_, err = harvester.NewImage(ctx, \"ubuntu20\", \u0026harvester.ImageArgs{\n\t\t\tDisplayName: pulumi.String(\"ubuntu20\"),\n\t\t\tNamespace:   pulumi.String(\"harvester-public\"),\n\t\t\tSourceType:  pulumi.String(\"download\"),\n\t\t\tUrl:         pulumi.String(\"http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}\n\n## Import\n\n\n\n```sh\n $ pulumi import harvester:index/image:Image foo \u003cNamespace\u003e/\u003cName\u003e\n```\n\n ",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "displayName": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "progress": {
+                    "type": "integer"
+                },
+                "pvcName": {
+                    "type": "string"
+                },
+                "pvcNamespace": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "integer"
+                },
+                "sourceType": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "storageClassName": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "url": {
+                    "type": "string",
+                    "description": "supports the `raw` and `qcow2` image formats which are supported by [qemu](https://www.qemu.org/docs/master/system/images.html#disk-image-file-formats). Bootable ISO images can also be used and are treated like `raw` images.\n"
+                }
+            },
+            "required": [
+                "displayName",
+                "name",
+                "progress",
+                "size",
+                "sourceType",
+                "state",
+                "storageClassName"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "displayName": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "pvcName": {
+                    "type": "string"
+                },
+                "pvcNamespace": {
+                    "type": "string"
+                },
+                "sourceType": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "url": {
+                    "type": "string",
+                    "description": "supports the `raw` and `qcow2` image formats which are supported by [qemu](https://www.qemu.org/docs/master/system/images.html#disk-image-file-formats). Bootable ISO images can also be used and are treated like `raw` images.\n"
+                }
+            },
+            "requiredInputs": [
+                "displayName",
+                "sourceType"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Image resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "displayName": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "progress": {
+                        "type": "integer"
+                    },
+                    "pvcName": {
+                        "type": "string"
+                    },
+                    "pvcNamespace": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "integer"
+                    },
+                    "sourceType": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "storageClassName": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "supports the `raw` and `qcow2` image formats which are supported by [qemu](https://www.qemu.org/docs/master/system/images.html#disk-image-file-formats). Bootable ISO images can also be used and are treated like `raw` images.\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "harvester:index/network:Network": {
+            "description": "\n\n## Import\n\n\n\n```sh\n $ pulumi import harvester:index/network:Network foo \u003cNamespace\u003e/\u003cName\u003e\n```\n\n ",
+            "properties": {
+                "config": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "routeCidr": {
+                    "type": "string",
+                    "description": "e.g. 172.16.0.1/24\n"
+                },
+                "routeConnectivity": {
+                    "type": "string"
+                },
+                "routeDhcpServerIp": {
+                    "type": "string"
+                },
+                "routeGateway": {
+                    "type": "string",
+                    "description": "e.g. 172.16.0.1\n"
+                },
+                "routeMode": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "vlanId": {
+                    "type": "integer",
+                    "description": "e.g. 1-4094\n"
+                }
+            },
+            "required": [
+                "config",
+                "name",
+                "routeConnectivity",
+                "state",
+                "vlanId"
+            ],
+            "inputProperties": {
+                "config": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "routeCidr": {
+                    "type": "string",
+                    "description": "e.g. 172.16.0.1/24\n"
+                },
+                "routeDhcpServerIp": {
+                    "type": "string"
+                },
+                "routeGateway": {
+                    "type": "string",
+                    "description": "e.g. 172.16.0.1\n"
+                },
+                "routeMode": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "vlanId": {
+                    "type": "integer",
+                    "description": "e.g. 1-4094\n"
+                }
+            },
+            "requiredInputs": [
+                "vlanId"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Network resources.\n",
+                "properties": {
+                    "config": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "routeCidr": {
+                        "type": "string",
+                        "description": "e.g. 172.16.0.1/24\n"
+                    },
+                    "routeConnectivity": {
+                        "type": "string"
+                    },
+                    "routeDhcpServerIp": {
+                        "type": "string"
+                    },
+                    "routeGateway": {
+                        "type": "string",
+                        "description": "e.g. 172.16.0.1\n"
+                    },
+                    "routeMode": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "vlanId": {
+                        "type": "integer",
+                        "description": "e.g. 1-4094\n"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "harvester:index/sSHKey:SSHKey": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst mysshkey = new harvester.SSHKey(\"mysshkey\", {\n    namespace: \"default\",\n    publicKey: \"your ssh public key\",\n});\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nmysshkey = harvester.SSHKey(\"mysshkey\",\n    namespace=\"default\",\n    public_key=\"your ssh public key\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var mysshkey = new Harvester.SSHKey(\"mysshkey\", new Harvester.SSHKeyArgs\n        {\n            Namespace = \"default\",\n            PublicKey = \"your ssh public key\",\n        });\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.NewSSHKey(ctx, \"mysshkey\", \u0026harvester.SSHKeyArgs{\n\t\t\tNamespace: pulumi.String(\"default\"),\n\t\t\tPublicKey: pulumi.String(\"your ssh public key\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}\n\n## Import\n\n\n\n```sh\n $ pulumi import harvester:index/sSHKey:SSHKey foo \u003cNamespace\u003e/\u003cName\u003e\n```\n\n ",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "fingerprint": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "publicKey": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "required": [
+                "fingerprint",
+                "name",
+                "publicKey",
+                "state"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "publicKey": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "publicKey"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering SSHKey resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "fingerprint": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "publicKey": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "harvester:index/virtualMachine:VirtualMachine": {
+            "description": "\n\n## Import\n\n\n\n```sh\n $ pulumi import harvester:index/virtualMachine:VirtualMachine foo \u003cNamespace\u003e/\u003cName\u003e\n```\n\n ",
+            "properties": {
+                "cloudinit": {
+                    "$ref": "#/types/harvester:index/VirtualMachineCloudinit:VirtualMachineCloudinit"
+                },
+                "cpu": {
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "disks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/harvester:index/VirtualMachineDisk:VirtualMachineDisk"
+                    }
+                },
+                "hostname": {
+                    "type": "string"
+                },
+                "machineType": {
+                    "type": "string"
+                },
+                "memory": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "networkInterfaces": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/harvester:index/VirtualMachineNetworkInterface:VirtualMachineNetworkInterface"
+                    }
+                },
+                "nodeName": {
+                    "type": "string"
+                },
+                "sshKeys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "start": {
+                    "type": "boolean"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "required": [
+                "disks",
+                "hostname",
+                "machineType",
+                "name",
+                "networkInterfaces",
+                "nodeName",
+                "state"
+            ],
+            "inputProperties": {
+                "cloudinit": {
+                    "$ref": "#/types/harvester:index/VirtualMachineCloudinit:VirtualMachineCloudinit"
+                },
+                "cpu": {
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "disks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/harvester:index/VirtualMachineDisk:VirtualMachineDisk"
+                    }
+                },
+                "hostname": {
+                    "type": "string"
+                },
+                "machineType": {
+                    "type": "string"
+                },
+                "memory": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "networkInterfaces": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/harvester:index/VirtualMachineNetworkInterface:VirtualMachineNetworkInterface"
+                    }
+                },
+                "sshKeys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "start": {
+                    "type": "boolean"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                }
+            },
+            "requiredInputs": [
+                "disks",
+                "networkInterfaces"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering VirtualMachine resources.\n",
+                "properties": {
+                    "cloudinit": {
+                        "$ref": "#/types/harvester:index/VirtualMachineCloudinit:VirtualMachineCloudinit"
+                    },
+                    "cpu": {
+                        "type": "integer"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "disks": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/harvester:index/VirtualMachineDisk:VirtualMachineDisk"
+                        }
+                    },
+                    "hostname": {
+                        "type": "string"
+                    },
+                    "machineType": {
+                        "type": "string"
+                    },
+                    "memory": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "networkInterfaces": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/harvester:index/VirtualMachineNetworkInterface:VirtualMachineNetworkInterface"
+                        }
+                    },
+                    "nodeName": {
+                        "type": "string"
+                    },
+                    "sshKeys": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "start": {
+                        "type": "boolean"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "harvester:index/volume:Volume": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst ubuntu20_dev_mount_disk = new harvester.Volume(\"ubuntu20-dev-mount-disk\", {\n    namespace: \"default\",\n    size: \"10Gi\",\n});\nconst ubuntu20_dev_image_disk = new harvester.Volume(\"ubuntu20-dev-image-disk\", {\n    image: \"harvester-public/ubuntu20\",\n    namespace: \"default\",\n    size: \"10Gi\",\n});\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nubuntu20_dev_mount_disk = harvester.Volume(\"ubuntu20-dev-mount-disk\",\n    namespace=\"default\",\n    size=\"10Gi\")\nubuntu20_dev_image_disk = harvester.Volume(\"ubuntu20-dev-image-disk\",\n    image=\"harvester-public/ubuntu20\",\n    namespace=\"default\",\n    size=\"10Gi\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var ubuntu20_dev_mount_disk = new Harvester.Volume(\"ubuntu20-dev-mount-disk\", new Harvester.VolumeArgs\n        {\n            Namespace = \"default\",\n            Size = \"10Gi\",\n        });\n        var ubuntu20_dev_image_disk = new Harvester.Volume(\"ubuntu20-dev-image-disk\", new Harvester.VolumeArgs\n        {\n            Image = \"harvester-public/ubuntu20\",\n            Namespace = \"default\",\n            Size = \"10Gi\",\n        });\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.NewVolume(ctx, \"ubuntu20-dev-mount-disk\", \u0026harvester.VolumeArgs{\n\t\t\tNamespace: pulumi.String(\"default\"),\n\t\t\tSize:      pulumi.String(\"10Gi\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\t_, err = harvester.NewVolume(ctx, \"ubuntu20-dev-image-disk\", \u0026harvester.VolumeArgs{\n\t\t\tImage:     pulumi.String(\"harvester-public/ubuntu20\"),\n\t\t\tNamespace: pulumi.String(\"default\"),\n\t\t\tSize:      pulumi.String(\"10Gi\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}\n\n## Import\n\n\n\n```sh\n $ pulumi import harvester:index/volume:Volume foo \u003cNamespace\u003e/\u003cName\u003e\n```\n\n ",
+            "properties": {
+                "accessMode": {
+                    "type": "string"
+                },
+                "attachedVm": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "phase": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "storageClassName": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "volumeMode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "attachedVm",
+                "name",
+                "phase",
+                "state",
+                "storageClassName"
+            ],
+            "inputProperties": {
+                "accessMode": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Any text you want that better describes this resource\n"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A unique name\n"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "storageClassName": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    }
+                },
+                "volumeMode": {
+                    "type": "string"
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Volume resources.\n",
+                "properties": {
+                    "accessMode": {
+                        "type": "string"
+                    },
+                    "attachedVm": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "image": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "phase": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "storageClassName": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "volumeMode": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "functions": {
+        "harvester:index/getClusterNetwork:getClusterNetwork": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst vlan = pulumi.output(harvester.getClusterNetwork({\n    name: \"vlan\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nvlan = harvester.get_cluster_network(name=\"vlan\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var vlan = Output.Create(Harvester.GetClusterNetwork.InvokeAsync(new Harvester.GetClusterNetworkArgs\n        {\n            Name = \"vlan\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupClusterNetwork(ctx, \u0026GetClusterNetworkArgs{\n\t\t\tName: \"vlan\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getClusterNetwork.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getClusterNetwork.\n",
+                "properties": {
+                    "defaultPhysicalNic": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "enable": {
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "defaultPhysicalNic",
+                    "description",
+                    "enable",
+                    "name",
+                    "state",
+                    "tags",
+                    "id"
+                ]
+            }
+        },
+        "harvester:index/getImage:getImage": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst ubuntu20 = pulumi.output(harvester.getImage({\n    name: \"ubuntu20\",\n    namespace: \"harvester-public\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nubuntu20 = harvester.get_image(name=\"ubuntu20\",\n    namespace=\"harvester-public\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var ubuntu20 = Output.Create(Harvester.GetImage.InvokeAsync(new Harvester.GetImageArgs\n        {\n            Name = \"ubuntu20\",\n            Namespace = \"harvester-public\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupImage(ctx, \u0026GetImageArgs{\n\t\t\tName:      \"ubuntu20\",\n\t\t\tNamespace: pulumi.StringRef(\"harvester-public\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getImage.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getImage.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "displayName": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "progress": {
+                        "type": "integer"
+                    },
+                    "pvcName": {
+                        "type": "string"
+                    },
+                    "pvcNamespace": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "integer"
+                    },
+                    "sourceType": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "storageClassName": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "supports the `raw` and `qcow2` image formats which are supported by [qemu](https://www.qemu.org/docs/master/system/images.html#disk-image-file-formats). Bootable ISO images can also be used and are treated like `raw` images.\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "description",
+                    "displayName",
+                    "name",
+                    "progress",
+                    "pvcName",
+                    "pvcNamespace",
+                    "size",
+                    "sourceType",
+                    "state",
+                    "storageClassName",
+                    "tags",
+                    "url",
+                    "id"
+                ]
+            }
+        },
+        "harvester:index/getNetwork:getNetwork": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst vlan1 = pulumi.output(harvester.getNetwork({\n    name: \"vlan1\",\n    namespace: \"harvester-public\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nvlan1 = harvester.get_network(name=\"vlan1\",\n    namespace=\"harvester-public\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var vlan1 = Output.Create(Harvester.GetNetwork.InvokeAsync(new Harvester.GetNetworkArgs\n        {\n            Name = \"vlan1\",\n            Namespace = \"harvester-public\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupNetwork(ctx, \u0026GetNetworkArgs{\n\t\t\tName:      \"vlan1\",\n\t\t\tNamespace: pulumi.StringRef(\"harvester-public\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getNetwork.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getNetwork.\n",
+                "properties": {
+                    "config": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "routeCidr": {
+                        "type": "string",
+                        "description": "e.g. 172.16.0.1/24\n"
+                    },
+                    "routeConnectivity": {
+                        "type": "string"
+                    },
+                    "routeDhcpServerIp": {
+                        "type": "string"
+                    },
+                    "routeGateway": {
+                        "type": "string",
+                        "description": "e.g. 172.16.0.1\n"
+                    },
+                    "routeMode": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "vlanId": {
+                        "type": "integer",
+                        "description": "e.g. 1-4094\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "config",
+                    "description",
+                    "name",
+                    "routeCidr",
+                    "routeConnectivity",
+                    "routeDhcpServerIp",
+                    "routeGateway",
+                    "routeMode",
+                    "state",
+                    "tags",
+                    "vlanId",
+                    "id"
+                ]
+            }
+        },
+        "harvester:index/getSSHKey:getSSHKey": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst mysshkey = pulumi.output(harvester.getSSHKey({\n    name: \"mysshkey\",\n    namespace: \"default\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nmysshkey = harvester.get_ssh_key(name=\"mysshkey\",\n    namespace=\"default\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var mysshkey = Output.Create(Harvester.GetSSHKey.InvokeAsync(new Harvester.GetSSHKeyArgs\n        {\n            Name = \"mysshkey\",\n            Namespace = \"default\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupSSHKey(ctx, \u0026GetSSHKeyArgs{\n\t\t\tName:      \"mysshkey\",\n\t\t\tNamespace: pulumi.StringRef(\"default\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getSSHKey.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getSSHKey.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "fingerprint": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "publicKey": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "description",
+                    "fingerprint",
+                    "name",
+                    "publicKey",
+                    "state",
+                    "tags",
+                    "id"
+                ]
+            }
+        },
+        "harvester:index/getVirtualMachine:getVirtualMachine": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst ubuntu20_dev = pulumi.output(harvester.getVirtualMachine({\n    name: \"ubuntu-dev\",\n    namespace: \"default\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nubuntu20_dev = harvester.get_virtual_machine(name=\"ubuntu-dev\",\n    namespace=\"default\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var ubuntu20_dev = Output.Create(Harvester.GetVirtualMachine.InvokeAsync(new Harvester.GetVirtualMachineArgs\n        {\n            Name = \"ubuntu-dev\",\n            Namespace = \"default\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupVirtualMachine(ctx, \u0026GetVirtualMachineArgs{\n\t\t\tName:      \"ubuntu-dev\",\n\t\t\tNamespace: pulumi.StringRef(\"default\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getVirtualMachine.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getVirtualMachine.\n",
+                "properties": {
+                    "cloudinits": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/harvester:index/getVirtualMachineCloudinit:getVirtualMachineCloudinit"
+                        }
+                    },
+                    "cpu": {
+                        "type": "integer"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "disks": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/harvester:index/getVirtualMachineDisk:getVirtualMachineDisk"
+                        }
+                    },
+                    "hostname": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "machineType": {
+                        "type": "string"
+                    },
+                    "memory": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "networkInterfaces": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/types/harvester:index/getVirtualMachineNetworkInterface:getVirtualMachineNetworkInterface"
+                        }
+                    },
+                    "nodeName": {
+                        "type": "string"
+                    },
+                    "sshKeys": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "start": {
+                        "type": "boolean"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "cloudinits",
+                    "cpu",
+                    "description",
+                    "disks",
+                    "hostname",
+                    "machineType",
+                    "memory",
+                    "name",
+                    "networkInterfaces",
+                    "nodeName",
+                    "sshKeys",
+                    "start",
+                    "state",
+                    "tags",
+                    "id"
+                ]
+            }
+        },
+        "harvester:index/getVolume:getVolume": {
+            "description": "{{% examples %}}\n## Example Usage\n{{% example %}}\n\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as harvester from \"@pulumi/harvester\";\n\nconst ubuntu20_dev_mount_disk = pulumi.output(harvester.getVolume({\n    name: \"ubuntu20-dev-mount-disk\",\n    namespace: \"default\",\n}));\n```\n```python\nimport pulumi\nimport pulumi_harvester as harvester\n\nubuntu20_dev_mount_disk = harvester.get_volume(name=\"ubuntu20-dev-mount-disk\",\n    namespace=\"default\")\n```\n```csharp\nusing Pulumi;\nusing Harvester = Pulumi.Harvester;\n\nclass MyStack : Stack\n{\n    public MyStack()\n    {\n        var ubuntu20_dev_mount_disk = Output.Create(Harvester.GetVolume.InvokeAsync(new Harvester.GetVolumeArgs\n        {\n            Name = \"ubuntu20-dev-mount-disk\",\n            Namespace = \"default\",\n        }));\n    }\n\n}\n```\n```go\npackage main\n\nimport (\n\t\"github.com/huaxk/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi-harvester/sdk/go/harvester\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := harvester.LookupVolume(ctx, \u0026GetVolumeArgs{\n\t\t\tName:      \"ubuntu20-dev-mount-disk\",\n\t\t\tNamespace: pulumi.StringRef(\"default\"),\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n{{% /example %}}\n{{% /examples %}}",
+            "inputs": {
+                "description": "A collection of arguments for invoking getVolume.\n",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getVolume.\n",
+                "properties": {
+                    "accessMode": {
+                        "type": "string"
+                    },
+                    "attachedVm": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Any text you want that better describes this resource\n"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "image": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "A unique name\n"
+                    },
+                    "namespace": {
+                        "type": "string"
+                    },
+                    "phase": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "storageClassName": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        }
+                    },
+                    "volumeMode": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "accessMode",
+                    "attachedVm",
+                    "description",
+                    "image",
+                    "name",
+                    "phase",
+                    "size",
+                    "state",
+                    "storageClassName",
+                    "tags",
+                    "volumeMode",
+                    "id"
+                ]
+            }
+        }
+    },
+    "language": {
+        "csharp": {
+            "compatibility": "tfbridge20",
+            "namespaces": null,
+            "packageReferences": {
+                "Pulumi": "3.*"
+            }
+        },
+        "go": {
+            "generateExtraInputTypes": true,
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/huaxk/pulumi-harvester/sdk/go/harvester"
+        },
+        "nodejs": {
+            "compatibility": "tfbridge20",
+            "dependencies": {
+                "@pulumi/pulumi": "^3.0.0"
+            },
+            "devDependencies": {
+                "@types/mime": "^2.0.0",
+                "@types/node": "^10.0.0"
+            },
+            "disableUnionOutputTypes": true,
+            "packageDescription": "A Pulumi package for creating and managing harvester cloud resources.",
+            "packageName": "@huaxkxy/pulumi-harvester",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/harvester/terraform-provider-harvester)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-harvester` repo](https://github.com/pulumi/pulumi-harvester/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`harvester/terraform-provider-harvester` repo](https://github.com/harvester/terraform-provider-harvester/issues).",
+            "typescriptVersion": ""
+        },
+        "python": {
+            "compatibility": "tfbridge20",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/harvester/terraform-provider-harvester)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-harvester` repo](https://github.com/pulumi/pulumi-harvester/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`harvester/terraform-provider-harvester` repo](https://github.com/harvester/terraform-provider-harvester/issues).",
+            "requires": {
+                "pulumi": "\u003e=3.0.0,\u003c4.0.0"
+            }
+        }
+    }
+}
